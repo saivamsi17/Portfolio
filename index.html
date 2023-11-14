@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script
+    src="https://kit.fontawesome.com/596315d291.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabName) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabContents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabName).classList.add("active-tab");
+    }
+  </script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <!-- <img src="images/logo.png" class="logo" /> -->
+        <div class="name-text"><span>V</span>amsi.</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Portfolio</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Full stack developer</p>
+        <h1>
+          Hi, I'm <span>Kaja sai vamsi</span><br />
+          from Hyderabad
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.png" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-tiitle">About Me</h1>
+          <p>
+            Experienced React Developer with 2 years experience creating
+            responsive user interface components using React and JavaScript.
+            Skilled in identifying user interactions, debugging both front-end
+            and back-end code, and proficient in writing unit test cases using
+            Jest and React testing library. Fair knowledge in Redux components
+            and adept at monitoring and maintaining frontend performance..
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Programming</span><br />Data Structures, Java, JavaScript, Typescript  
+              </li>
+              <li>
+                <span>Web Development</span><br />HTML5, CSS/SCSS, React, Redux, NodeJS, GraphQL, RestAPI
+              </li>
+              <li>
+                <span>Software & Tools</span><br />Vscode, Gitlab, Github, Sonarqube, Jest, React testing library
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>2021 - current</span><br />product & Platform engineer at
+                Altimetrik
+              </li>
+              <li>
+                <span>Aug 2021 - Dec 2021</span><br />Fullstack Development
+                Trianee
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>2017 - 2021</span><br />Computer Science & Engineering at
+                Lovely Professional University
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Wed Design</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+            voluptas nesciunt, similique aperiam excepturi saepe
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop-simple"></i>
+          <h2>UI/UX Design</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+            voluptas nesciunt, similique aperiam excepturi saepe
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-app-store"></i>
+          <h2>App Design</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+            voluptas nesciunt, similique aperiam excepturi saepe
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="work">
+    <div class="container">
+      <h1 class="sub-title">My work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/work-1.png" />
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              iusto veritatis dolores suscipit
+            </p>
+            <a href="#"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-2.png" />
+          <div class="layer">
+            <h3>Music App</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              iusto veritatis dolores suscipit
+            </p>
+            <a href="#"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-3.png" />
+          <div class="layer">
+            <h3>Online Shopping App</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              iusto veritatis dolores suscipit
+            </p>
+            <a href="#"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <h1 class="connect-header">Connect with me</h1>
+      <div class="connect">
+        <div class="connect-1">
+          <ul>
+            <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/saivamsi17/" target="_blank">saivamsi17</a></li>
+            <li><i class="fa-brands fa-github"></i><a href="https://github.com/saivamsi17" target="_blank">saivamsi17</a></li>
+            <li>
+              <i class="fa-regular fa-envelope"> <a href="mailto:vamsikaja1703@gmail.com"></i>vamsikaja1703@gmail.com</a></li>
+            <li><i class="fa-solid fa-mobile-screen-button"></i>7093926359</li>
+          </ul>
+        </div>
+        <div class="connect-2"><i class="fa-regular fa-file"></i>Resume</div>
+      </div>
+    </div>
+  </div>
+</body>
